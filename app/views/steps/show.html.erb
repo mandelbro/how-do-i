@@ -1,0 +1,38 @@
+
+<div class="row">
+  <div class="columns">
+    <h1><%= @subject.title %></h1>
+  </div>
+</div>
+
+<hr class="section-spacer">
+
+<div class="row">
+  <div class="columns large-6">
+    <h2><%= @step.title %></h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="columns large-6">
+    <p><%= markdown @step.description %></p>
+  </div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="columns large-6">
+    <% if current_user %>
+      <ul class="inline-list">
+        <li><%= link_to "Edit", [:edit, @subject, @step] %></li>
+        <li><%= link_to "Delete", [@subject, @step], method: :delete %></li>
+        <li><%= link_to "Back", @subject %></li>
+      </ul>
+    <% else %>
+      <ul class="inline-list">
+        <li><%= link_to "Back", @subject %></li>
+      </ul>
+    <% end %>
+
+  </div>
+</div>

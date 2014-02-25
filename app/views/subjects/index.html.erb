@@ -1,0 +1,23 @@
+
+<div class="subjects-grid row">
+  <div class="columns">
+    <ul class="small-block-grid-3">
+      <% @subjects.each do |subject| %>
+      <li class="howto-grid-item">
+        <div class="subject" id="<%= dom_id(subject) %>">
+          <h3><%= link_to subject.title, subject %></h3>
+          <p><%= markdown subject.description %></p>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<hr class="section-spacer">
+
+<div class="row">
+  <div class="columns">
+    <%= link_to 'New subject', new_subject_path, class: 'button medium' %>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+
+<div class="row">
+  <div class="columns">
+    <h1><%= @subject.title %></h1>
+  </div>
+</div>
+
+<hr class="section-spacer">
+
+<div class="row">
+  <div class="columns large-6">
+    <%= markdown @subject.description %>
+  </div>
+</div>
+
+<div class="row steps-list">
+  <div class="columns large-10">
+    <% @subject.steps.each_with_index do |step, i| %>
+    <div class="row">
+      <div class="columns">
+        <h3>Step <%= i + 1 %>: <%= link_to step.title, [@subject, step] %></h3>
+        <p><%= step.description %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="columns large-6">
+  <% if current_user %>
+    <ul class="inline-list">
+      <li><%= link_to "Edit", [:edit, @subject] %></li>
+      <li><%= link_to "Delete", @subject, method: :delete %></li>
+      <li><%= link_to "Add New Step", new_subject_step_path(@subject) %></li>
+    </ul>
+  <% else %>
+    <ul class="inline-list">
+      <li><%= link_to "Back", subjects_path %></li>
+    </ul>
+  <% end %>
+  </div>
+</div>

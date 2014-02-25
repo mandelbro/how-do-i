@@ -1,0 +1,10 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+tie:
+  title: Tie a Tie
+  description: You tie it.
+
+shoe:
+  title: Put on shoes
+  description: Put them on

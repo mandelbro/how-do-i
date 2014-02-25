@@ -1,0 +1,25 @@
+
+  <%= form_for(@subject) do |f| %>
+    <div class="field row">
+
+      <div class="columns large-4">
+        <%= f.label :title, title: "Title" %>
+      </div>
+      <div class="columns large-8">
+        <%= f.text_field :title %>
+      </div>
+    </div>
+
+    <div class="field row">
+      <div class="columns large-4">
+        <%= f.label :description, title: "Body" %>
+      </div>
+      <div class="columns large-8">
+        <%= f.text_area :description, class: "big-textarea" %>
+      </div><br />
+    </div>
+
+    <div class="actions">
+      <%= submit_tag "Save Subject", class: 'button large' %>
+    </div>
+  <% end %>

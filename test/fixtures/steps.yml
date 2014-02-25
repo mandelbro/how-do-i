@@ -1,0 +1,20 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+tie_step_one:
+  title: Wrap the tie around your neck
+  description: Like so
+  weight: 1
+  subject: tie
+
+tie_step_two:
+  title: Tie it in a knot
+  description: A super fancy knot
+  weight: 2
+  subject: tie
+
+tie_step_three:
+  title: Check yourself
+  description: Before you wreck yourself
+  weight: 3
+  subject: tie
