@@ -1,7 +1,8 @@
 class StepsController < ApplicationController
 
-   before_filter :get_step,     :only => [:show, :edit, :update, :destroy]
-   before_filter :get_subject,  :only => [:index, :show, :edit, :update, :new, :create, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_filter :get_step,     :only => [:show, :edit, :update, :destroy]
+  before_filter :get_subject,  :only => [:index, :show, :edit, :update, :new, :create, :destroy]
 
   def index
     @steps = @subject.steps

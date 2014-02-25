@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
-   before_filter :get_subject, :only => [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_filter :get_subject, :only => [:show, :edit, :update, :destroy]
 
   def index
     @subjects = Subject.all
