@@ -14,10 +14,10 @@ Simply download the repo and run `bundle install`
 
 Then migrate the database:
 
-`rake db:create && rake:db:migrate`
+`rake db:setup`
 
 And pull in dummy data if you want
 
-`rake db:fixtures:load`
+`rake db fixtures:load`
 
 Tests are located in the /test/features directory
