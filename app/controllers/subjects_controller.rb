@@ -7,6 +7,7 @@ class SubjectsController < ApplicationController
   end
 
   def show
+    @steps = @subject.steps.order('weight asc')
   end
 
   def new

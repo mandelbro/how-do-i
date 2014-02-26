@@ -15,7 +15,7 @@
 
 <div class="row steps-list">
   <div class="columns large-10">
-    <% @subject.steps.each_with_index do |step, i| %>
+    <% @steps.each_with_index do |step, i| %>
     <div class="row">
       <div class="columns">
         <h3>Step <%= i + 1 %>: <%= link_to step.title, [@subject, step] %></h3>
